@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Péče o koníčka</title>
+    <link rel="stylesheet" href="horse-game.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🐴 Můj virtuální kůň</h1>
+            <p>Starej se o svého koníčka, aby byl šťastný!</p>
+        </header>
+
+        <main>
+            <div class="graphics-area">
+                <!-- Zde použijeme lokální cestu - ulož si sem prosím ten vygenerovaný obrázek nebo ho zkopírujeme -->
+                <img id="horse-img" src="horse.png" alt="Můj kůň" class="horse">
+            </div>
+
+            <div class="stats-area">
+                <div class="stat-row">
+                    <span class="stat-label">⚡ Energie:</span>
+                    <div class="progress-bar">
+                        <div id="bar-energy" class="progress-fill energy" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">💧 Žízeň:</span>
+                    <div class="progress-bar">
+                        <div id="bar-water" class="progress-fill water" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">✨ Čistota:</span>
+                    <div class="progress-bar">
+                        <div id="bar-clean" class="progress-fill clean" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-area">
+                <button id="btn-feed" class="action-btn">🍎 Nakrmit</button>
+                <button id="btn-water" class="action-btn">🪣 Napojit</button>
+                <button id="btn-groom" class="action-btn">🪮 Vyhřebelcovat</button>
+            </div>
+
+            <div id="message-overlay" class="message-overlay hidden">
+                <div class="message-box">
+                    <h2 id="end-title">Konec hry!</h2>
+                    <p id="end-desc">Tvůj kůň tě opustil, protože jsi se o něj nestaral.</p>
+                    <button id="btn-restart" class="restart-btn">Hrát znovu</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="horse-game.js"></script>
+</body>
+
+</html>
