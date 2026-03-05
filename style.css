@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d1117;
+    /* GitHub Dark Mode bg */
+    color: #c9d1d9;
+    /* GitHub text color */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    background-color: #161b22;
+    /* GitHub slightly lighter dark */
+    border: 1px solid #30363d;
+    /* GitHub border color */
+    border-radius: 6px;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 15px;
+}
+
+h1 {
+    color: #58a6ff;
+    /* GitHub Blue */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.story-box {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    min-height: 150px;
+    white-space: pre-wrap;
+    /* Preserve line breaks */
+    padding: 15px;
+    background-color: #010409;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    background-color: #010409;
+    padding: 10px 15px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
+.prompt {
+    color: #2ea043;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.command-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: #c9d1d9;
+    font-family: inherit;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #8b949e;
+    border-top: 1px solid #30363d;
+    padding-top: 15px;
+}
+
+/* Let's add a neat little terminal typing effect class if we want */
+.typing {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
